@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | SoulsLite</title>
+    <title>Unity WebGL Player | WebGL</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -22,20 +22,19 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">SoulsLite</div>
+        <div id="unity-build-title">WebGL</div>
       </div>
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/webgl.loader.js";
+      var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        TOTAL_MEMORY: 128000000,
-        dataUrl: buildUrl + "/webgl.data.unityweb",
-        frameworkUrl: buildUrl + "/webgl.framework.js.unityweb",
-        codeUrl: buildUrl + "/webgl.wasm.unityweb",
+        dataUrl: buildUrl + "/Build.data.unityweb",
+        frameworkUrl: buildUrl + "/Build.framework.js.unityweb",
+        codeUrl: buildUrl + "/Build.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "SoulsLite",
+        productName: "WebGL",
         productVersion: "0.1",
       };
 
