@@ -57,23 +57,6 @@
     <div id="unity-progress-bar">
     </div>
   </div>
-  <system.webServer>
-    <staticContent>
-            <remove fileExtension=".unityweb" />
-            <mimeMap fileExtension=".unityweb" mimeType="application/octet-stream" />
-    </staticContent>
-    <rewrite>
-            <outboundRules>
-                <rule name="Append br Content-Encoding header">
-                    <match serverVariable="RESPONSE_Content-Encoding" pattern=".*" />
-                    <conditions>
-                            <add input="{REQUEST_FILENAME}" pattern="\.unityweb$" />
-                    </conditions>
-                    <action type="Rewrite" value="br" />
-                </rule>
-            </outboundRules>
-    </rewrite>
- </system.webServer>
   <script src="Build/Build.loader.js"></script>
   <script>
     const maxPixelRatioMobile = 2.0;
@@ -86,9 +69,9 @@
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/Build.loader.js";
     var config = {
-      dataUrl: buildUrl + "/Build.data.br",
-      frameworkUrl: buildUrl + "/Build.framework.js.br",
-      codeUrl: buildUrl + "/Build.wasm.br",
+      dataUrl: buildUrl + "/Build.data",
+      frameworkUrl: buildUrl + "/Build.framework.js",
+      codeUrl: buildUrl + "/Build.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "JohannesDeml",
       productName: "WebLoadingTest",
